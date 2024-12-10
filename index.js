@@ -5,6 +5,6 @@ function isPalindrome(x){
 }
 
 
-const result = isPalindrome(121)
+const results = isPalindrome(121)
 
-console.log(result);
+console.log(results);
