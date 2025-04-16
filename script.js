@@ -6,5 +6,19 @@ function abc(){
     const c = 30
 }
 
-abc();
+// abc();
+
+let num = [1,2,3,4]
+
+let reducedNum = num.reduce((acc,cur,index) => {
+    return cur
+},0)
+
+console.log(reducedNum);
+
+
+
+
+
+
 
