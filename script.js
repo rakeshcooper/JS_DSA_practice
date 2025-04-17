@@ -43,9 +43,28 @@ let person = {
 }
 
 let { name, age, ...rest} = person
-console.log(name,age = 25, rest);
+//console.log(name,age = 25, rest);
 
 
+let user = {
+    name: "Cooper",
+    getname(){
+        let name = "Rakesh Cooper"
+        console.log(this.name);
+
+        getnewName = () => {
+            let name = "Rakesh Cooper Rocks"
+            console.log(this);
+        }
+
+        getnewName()
+        
+    },
+
+   
+}
+
+user.getname()
 
 
 
