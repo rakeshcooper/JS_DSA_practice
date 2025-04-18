@@ -102,8 +102,16 @@ function showDuplicatecount(name){
       }
     
     }
-
     console.log(obj);
+
+    for (const value in obj) {
+        if(obj[value] > 1){
+            console.log(value+":"+ obj[value]);
+        }
+        
+        }
+    
+
         
 }
 showDuplicatecount("Cooper is good boy Cooper good")
