@@ -104,12 +104,17 @@ function showDuplicatecount(name){
     }
     console.log(obj);
 
+    let newArr = []
     for (const value in obj) {
         if(obj[value] > 1){
+            newArr.push(value)
             console.log(value+":"+ obj[value]);
         }
         
         }
+
+        console.log(newArr);
+        
     
 
         
