@@ -86,7 +86,27 @@ let maximumNum = number.reduce((max,cur) => {
     return max
 })
 
-console.log(maximumNum);
+//console.log(maximumNum);
+
+
+function showDuplicatecount(name){
+    let newName = name.split(" ")
+    //console.log(newName);
+    let obj = {}
+    for (let i = 0; i < newName.length; i++) {
+      //  obj[newName[i]] = (obj[newName[i]] || 0) + 1
+      if (obj[newName[i]]) {
+        obj[newName[i]] += 1;
+      } else {
+        obj[newName[i]] = 1;
+      }
+    
+    }
+
+    console.log(obj);
+        
+}
+showDuplicatecount("Cooper is good boy Cooper good")
 
 
 
