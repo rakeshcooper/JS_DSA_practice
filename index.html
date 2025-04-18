@@ -1,11 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS-Practice</title>
+    <style>
+        *{
+            margin: 25px;
+            box-sizing: border-box;
+            
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+        }
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .grandparent{
+            height: 350px;
+            width: 350px;
+            border: 2px solid red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .parent{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border: 2px solid blue;
+        }
+        .child{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 2px solid green;
+        }
+    </style>
 </head>
 <body>
+    <div class="container center">
+        <div class="grandparent center" id="one">
+       
+        <div class="parent center" id="two">
+            
+            <div class="child" id="three">
+               
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        let grandparent=document.getElementById('one')
+        let parent=document.getElementById('two')
+        let child=document.getElementById('three')
+        grandparent.addEventListener('click',function(e){
+          if(e.target.classList.contains("grandparent")){
+            console.log("Grandparent Clicked")
+            this.style.backgroundColor = "red"
+          } else if(e.target.classList.contains("parent")){
+            console.log("parent Clicked")
+            parent.style.backgroundColor = "blue"
+          } else if(e.target.classList.contains("child")){
+            console.log("child Clicked")
+            child.style.backgroundColor = "green"
+          }
+            
+        })
+    </script>
+</body>
+</html> -->
+
+<html>
+<head>
+    <style>
+        *{
+            margin: 25px;
+            box-sizing: border-box;
+        }
+        .grandparent{
+            height: 350px;
+            width: 350px;
+            border: 2px solid red;
+        }
+        .parent{
+            height: 250px;
+            width: 250px;
+            border: 2px solid blue;
+        }
+        .child{
+            height: 150px;
+            width: 150px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent" id="one">
+        Grandparent
+        <div class="parent" id="two">
+            Parent
+            <div class="child" id="three">
+                Child
+            </div>
+        </div>
+    </div>
+    <form action="">
+        form
+        <button type="submit">button</button>
+    </form>
+    <!-- <script>
+        let grandparent=document.getElementById('one')
+        let parent=document.getElementById('two')
+        let child=document.getElementById('three')
+        grandparent.addEventListener('click',function(e){
+          e.stopPropagation()
+            console.log("Grandparent Clicked")
+        })
+        parent.addEventListener('click',function(e){
+            e.stopPropagation()
+            console.log("Parent Clicked")
+        })
+        child.addEventListener('click',function(e){
+            e.stopPropagation()
+            console.log("Child Clicked")
+        })
+
+
+        let fm = document.querySelector("form");
+        fm.addEventListener("submit",(e) => {
+            e.preventDefault();
+        })
+
+        const numbers = [5, 10, 3, 42, 8];
+        const largest = numbers.reduce((max, current) => current > max ? current : max);
+        console.log(largest); // 42
+
+        
+    </script> -->
     <script src="script.js"></script>
 </body>
 </html>
+

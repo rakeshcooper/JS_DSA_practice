@@ -64,7 +64,34 @@ let user = {
    
 }
 
-user.getname()
+//user.getname()
+
+let number = [1,5,10,45,85,2,9]
+let largest = number[0]
+
+for (let i = 0; i < number.length; i++) {
+    if(number[i] > largest){
+        largest = number[i]
+    }    
+}
+
+console.log(largest);
+
+console.log("test");
+
+let maximumNum = number.reduce((max,cur) => {
+    if(cur > max){
+        return cur
+    }
+    return max
+})
+
+console.log(maximumNum);
+
+
+
+
+
 
 
 
