@@ -64,7 +64,7 @@ let user = {
    
 }
 
-//user.getname()
+user.getname()
 
 let number = [1,5,10,45,85,2,9]
 let largest = number[0]
@@ -106,7 +106,7 @@ function showDuplicatecount(name){
 
     let newArr = []
     for (const value in obj) {
-        if(obj[value] > 1){
+        if(obj[value] <= 1){
             newArr.push(value)
             console.log(value+":"+ obj[value]);
         }
