@@ -120,7 +120,7 @@ function showDuplicatecount(name){
 //showDuplicatecount("Cooper is good boy Cooper good")
 
 
-let dActivebtn = document.querySelector(".deactive")
+//let dActivebtn = document.querySelector(".deactive")
 let clickedCount = 0
 
 function handleClick(){
@@ -133,8 +133,50 @@ function handleClick(){
             console.log("button Deactivated");        
        }
 }
-dActivebtn.addEventListener("click",handleClick)
+//dActivebtn.addEventListener("click",handleClick)
 
+let max = 0
+console.log(max);
+
+let n = [[5,1],[8,90],[588,9]]
+
+let largeNum = -1
+
+// for (const inner of n) {
+//     for (const innerValue of inner) {
+//         if (largeNum < innerValue) {
+//             largeNum = innerValue
+//         }
+//     }
+// }
+
+const nestedArray = [[3, 5], [7, 2, 9], [1, 4]];
+for (let i = 0; i < nestedArray.length; i++) {
+    for (let j = 0; j < nestedArray[i].length; j++) {
+        let innerValue = nestedArray[i][j]
+         if (largeNum < innerValue) {
+             largeNum = innerValue
+         }
+    }
+}
+//console.log(flattenArray);
+
+
+//flattenArrays(nestedArray)
+function flattenArrays(nArr){
+    let flattenArray = []
+    for (let i = 0; i < nArr.length; i++) {
+    for (let j = 0; j < nArr[i].length; j++) {
+        let innerValue = nArr[i][j]
+        flattenArray.push(innerValue)
+    }
+}
+console.log(flattenArray);
+}
+
+const newnestedArray = [1, [2, [3, [4, 5]]], 6];
+let newFlattenArr = newnestedArray.flat(3)
+console.log(newFlattenArr);
 
  
 
