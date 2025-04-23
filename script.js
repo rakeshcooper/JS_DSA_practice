@@ -113,14 +113,30 @@ function showDuplicatecount(name){
         
         }
 
-        console.log(newArr);
+        console.log(newArr.join(" "));
         
-    
-
         
 }
-showDuplicatecount("Cooper is good boy Cooper good")
+//showDuplicatecount("Cooper is good boy Cooper good")
 
+
+let dActivebtn = document.querySelector(".deactive")
+let clickedCount = 0
+
+function handleClick(){
+    clickedCount += 1
+    console.log(clickedCount); 
+     if(clickedCount == 3){
+         dActivebtn.removeEventListener("click",handleClick)
+            dActivebtn.disabled = true;
+            dActivebtn.style.cursor = "none"
+            console.log("button Deactiveted");        
+       }
+}
+dActivebtn.addEventListener("click",handleClick)
+
+
+ 
 
 
 
