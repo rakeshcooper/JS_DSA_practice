@@ -127,10 +127,10 @@ function handleClick(){
     clickedCount += 1
     console.log(clickedCount); 
      if(clickedCount == 3){
-         dActivebtn.removeEventListener("click",handleClick)
+        dActivebtn.removeEventListener("click",handleClick)
             dActivebtn.disabled = true;
             dActivebtn.style.cursor = "none"
-            console.log("button Deactiveted");        
+            console.log("button Deactivated");        
        }
 }
 dActivebtn.addEventListener("click",handleClick)
