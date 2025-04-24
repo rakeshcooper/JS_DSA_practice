@@ -189,12 +189,47 @@ function flatAnyDimensionalArray(nestedArray){
     }
 }
 
-flatAnyDimensionalArray(newFlattenedArray)
-console.log("original : "+newFlattenArr);
+//flatAnyDimensionalArray(newFlattenedArray)
+//console.log("original : "+newFlattenArr);
 
 // for (let i = newFlattenArr.length - 1; i >= 0  ; i--) {
 //     console.log(newFlattenArr[i]);
 // }
+
+//Given the array below, find the minimum and maximum number.
+const newArr = [8, 3, 15, 1, 22, 7, 10];
+function findMinandMax(arr){
+    let min = newArr[0]
+    let max = newArr[0]
+    for (const Num of arr) {
+        if(min > Num){
+            min = Num
+        }
+
+        if(max < Num){
+            max = Num
+        }
+    }
+    console.log(`Min: ${min}`);
+    console.log(`Max: ${max}`);
+    
+}
+findMinandMax(newArr)
+
+// isPalindrome
+
+function isPalindrome(word){
+    return word === word.split("").reverse().join("")
+}
+
+// console.log(isPalindrome("madam"),       
+// isPalindrome("hello"),     
+// isPalindrome("racecar"),     
+// isPalindrome("palindrome")  );
+
+
+
+
 
  
 
