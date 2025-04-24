@@ -128,9 +128,9 @@ function handleClick(){
     console.log(clickedCount); 
      if(clickedCount == 3){
         dActivebtn.removeEventListener("click",handleClick)
-            dActivebtn.disabled = true;
-            dActivebtn.style.cursor = "none"
-            console.log("button Deactivated");        
+        dActivebtn.disabled = true;
+        dActivebtn.style.cursor = "none"
+        console.log("button Deactivated");        
        }
 }
 //dActivebtn.addEventListener("click",handleClick)
@@ -176,7 +176,25 @@ console.log(flattenArray);
 
 const newnestedArray = [1, [2, [3, [4, 5]]], 6];
 let newFlattenArr = newnestedArray.flat(3)
-console.log(newFlattenArr);
+//console.log(newFlattenArr);
+
+let newFlattenedArray = []
+function flatAnyDimensionalArray(nestedArray){
+    for (const item of nestedArray) {
+        if(Array.isArray(item)){
+            flatAnyDimensionalArray(item)
+        } else {
+            newFlattenedArray.push(item)
+        }
+    }
+}
+
+flatAnyDimensionalArray(newFlattenedArray)
+console.log("original : "+newFlattenArr);
+
+// for (let i = newFlattenArr.length - 1; i >= 0  ; i--) {
+//     console.log(newFlattenArr[i]);
+// }
 
  
 
