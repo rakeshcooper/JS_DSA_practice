@@ -267,8 +267,30 @@ function intersectionArray(){
     let arr2 = [4, 5, 6, 7, 8];
     let intersectedArray = []
 
-
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+           if(arr1[i] == arr2[j]){
+            intersectedArray.push(arr1[i])
+            }
+        }
+    }
+    console.log(intersectedArray);
 }
+//intersectionArray()
+
+function intersectionArray2(){
+    let arr1 = [1, 2, 3, 4, 5];
+    let arr2 = [4, 5, 6, 7, 8];
+    let intersectedArray = 
+    arr1.filter((ele,) => {
+        return arr2.includes(ele)
+    })
+
+    console.log(intersectedArray);
+    
+}
+
+//intersectionArray2()
 
 
  
