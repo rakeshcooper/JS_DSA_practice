@@ -166,12 +166,12 @@ for (let i = 0; i < nestedArray.length; i++) {
 function flattenArrays(nArr){
     let flattenArray = []
     for (let i = 0; i < nArr.length; i++) {
-    for (let j = 0; j < nArr[i].length; j++) {
-        let innerValue = nArr[i][j]
-        flattenArray.push(innerValue)
+        for (let j = 0; j < nArr[i].length; j++) {
+            let innerValue = nArr[i][j]
+            flattenArray.push(innerValue)
+        }
     }
-}
-console.log(flattenArray);
+    console.log(flattenArray);
 }
 
 const newnestedArray = [1, [2, [3, [4, 5]]], 6];
@@ -292,6 +292,63 @@ function intersectionArray2(){
 
 //intersectionArray2()
 
+function removeduplinfil(){
+    let arr = [1, 2, 3, 2, 4, 5, 5, 6]
+    let intersectedArr = arr.filter((item,index,self) => {
+        if(self.indexOf(item) === index){
+            return item
+        }
+    })
+    console.log(intersectedArr);
+    
+}
+//removeduplinfil()
+
+function findOddorEven(){
+    let arr = [10, 3, 7, 2, 8, 9, 12]
+    let even = []
+    let odd = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 === 0){
+            even.push(arr[i])
+        } else {
+            odd.push(arr[i])
+        }
+    }
+    console.log(`Even Numbers: [${even}]`);
+    console.log(`Odd Numbers: [${odd}]`);
+    
+    
+}
+
+//findOddorEven()
+
+function sumPair(){
+    let arr = [1, 2, 3, 4, 5, 6]
+    let targetSum = 7
+    let sumpairarr = []
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i+1; j < arr.length; j++) {
+            if(arr[i] + arr[j] === targetSum){
+                sumpairarr.push([arr[i],arr[j]])
+            }
+        }
+    }
+    console.log(sumpairarr);
+    
+}
+
+sumPair()
+
+let arr1 = [3,4]
+let arr2 = [3,4]
+
+
+// console.log(sumpairarr);
+//     const uniqueNumbers = [...new Set(sumpairarr.flat())];
+//     console.log(uniqueNumbers);
+    
 
  
 
