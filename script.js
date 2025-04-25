@@ -339,7 +339,7 @@ function sumPair(){
     
 }
 
-sumPair()
+//sumPair()
 
 let arr1 = [3,4]
 let arr2 = [3,4]
