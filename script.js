@@ -214,7 +214,7 @@ function findMinandMax(arr){
     console.log(`Max: ${max}`);
     
 }
-findMinandMax(newArr)
+//findMinandMax(newArr)
 
 // isPalindrome
 
@@ -227,6 +227,51 @@ function isPalindrome(word){
 // isPalindrome("racecar"),     
 // isPalindrome("palindrome")  );
 
+
+let RNarr = [1, 2, 3, 4, 5]
+let RotaredArr = []
+let lastItem
+let firstItem
+
+function forwardRotateArray(arr, r){
+    if(r > 0){  
+        r = r % arr.length    
+        for (let i = 0; i < r; i++) {
+            lastItem = arr[arr.length - 1]        
+            // arr.splice(arr.length - 1, 1)
+            arr.pop()         
+            arr.unshift(lastItem)                 
+        }
+    console.log(arr)
+    }
+}
+//forwardRotateArray(RNarr,2)
+
+function backwardRotateArray(arr, r){     
+    if(r > 0){
+        r = r % arr.length    
+        for (let i = 0; i < r; i++) {
+            firstItem = arr[0]
+            arr.shift()
+            arr.push(firstItem)
+        }
+    }
+    console.log(arr);
+}
+//backwardRotateArray(RNarr, 3)
+ //console.log(RNarr);
+
+ //find the Intersection of two array
+function intersectionArray(){
+    let arr1 = [1, 2, 3, 4, 5];
+    let arr2 = [4, 5, 6, 7, 8];
+    let intersectedArray = []
+
+
+}
+
+
+ 
 
 
 
