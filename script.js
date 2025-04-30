@@ -362,7 +362,7 @@ function findFactorialNum(n){
     return result
 }
 
-console.log(findFactorialNum(10));
+//console.log(findFactorialNum(10));
 
 function findFactorialNumRecursion(n){
     if(n < 0) return undefined
@@ -371,10 +371,55 @@ function findFactorialNumRecursion(n){
 }
 
 //console.log(findFactorialNumRecursion(10));
+// let value = 10
+// const obj = {
+//     value: 10,
+//     getValue: () => {
+//         return this.value;
+//       },
+//     obj2:{
+//         value : 10,
+//         // getValue: () => {
+//         //     return this.value;
+//         //   }
+//     }
+//   };
+//   console.log(obj.getValue());    
 
-    
+this.value = 100;
 
- 
+const obj = {
+  value: 10,
+  getValue: () => {
+    console.log(this); // In browser, logs `window`
+    return this.value;
+  }
+};
+
+//console.log(obj.getValue()); // 💡 In browser: 100 (from global `value`)
+
+
+function test(){
+    for (var i = 0; i < 3; i++) { 
+       // setTimeout(() => console.log(i), 0);
+        // (function inner(j){
+        //     setTimeout(() => console.log(j), 1000);
+        // }(i)) 
+        console.log(i);
+        
+    }
+}
+
+//test()
+
+function scopetest(){
+    {
+        const x = 20
+        console.log(x);
+    }
+    console.log(x);
+}
+//scopetest()
 
 
 
