@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image test</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .inner_box{
+            padding: 35px 0 35px 0;
+        }
+        .test_col img{
+            width: 100%;
+            border: 1px solid #000;
+        }
+        .test_row{
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+         .test_col{
+            width: calc(100%/2);
+            order: 1;
+         }
+
+
+         @media(max-width: 768px){
+            .test_row{
+                display: flex;
+                flex-direction: column;
+            }
+            /* .container{
+                background-color: lightcoral;
+            } */
+          
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner_box">
+            <div class="test_row">
+                <div class="test_col test_col_1">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa est, nisi deleniti, necessitatibus vitae fugit modi quae, expedita voluptas recusandae debitis nam quisquam distinctio laboriosam! Obcaecati maiores sequi veniam magnam unde recusandae iste porro temporibus. Consequuntur, iure? Necessitatibus earum repellat deleniti dolore vel quasi voluptate ex assumenda, fugit natus nisi est placeat nesciunt tempora similique. Vitae nam corporis, ut obcaecati totam necessitatibus quisquam placeat tempora repudiandae, doloremque sint, adipisci ea earum eligendi. Nam consequuntur est nobis corrupti consequatur unde labore vel deleniti pariatur corporis! Sunt rerum nemo pariatur, molestias odit adipisci possimus est libero sed iste neque dicta dolore nam!
+                </div>
+                <div class="test_col test_col_2">
+                    <img src="./rose.webp" alt="roses_images" >
+                </div>
+            </div>
+        </div>
+        <div class="inner_box">
+            <div class="test_row">
+                <div class="test_col test_col_1">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa est, nisi deleniti, necessitatibus vitae fugit modi quae, expedita voluptas recusandae debitis nam quisquam distinctio laboriosam! Obcaecati maiores sequi veniam magnam unde recusandae iste porro temporibus. Consequuntur, iure? Necessitatibus earum repellat deleniti dolore vel quasi voluptate ex assumenda, fugit natus nisi est placeat nesciunt tempora similique. Vitae nam corporis, ut obcaecati totam necessitatibus quisquam placeat tempora repudiandae, doloremque sint, adipisci ea earum eligendi. Nam consequuntur est nobis corrupti consequatur unde labore vel deleniti pariatur corporis! Sunt rerum nemo pariatur, molestias odit adipisci possimus est libero sed iste neque dicta dolore nam!
+                </div>
+                <div class="test_col test_col_2">
+                    <img src="./rose.webp" alt="roses_images" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let col_1 = document.querySelectorAll(".test_col_1")
+        let col_2 = document.querySelectorAll(".test_col_2")
+        let container = document.querySelector(".container")
+        
+        if(window.innerWidth <= 768){
+            for (let i = 0; i < col_1.length; i++) {
+              col_2[i].insertAdjacentElement("afterend", col_1[i])          
+            }
+            // container.style.backgroundColor = "lightcoral"
+        }
+    </script>
+</body>
+</html>
